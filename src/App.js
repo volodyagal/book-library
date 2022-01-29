@@ -4,7 +4,6 @@ import useLocalStorage from 'use-local-storage'
 import {Container} from "react-bootstrap";
 import Sidebar from "./components/Sidebar";
 import {Routes, Route, Navigate} from "react-router-dom";
-import Home from "./pages/Home";
 import Books from "./pages/Books";
 
 function App() {
@@ -35,7 +34,7 @@ function App() {
                     </div>
                     <div className='content-wrapper'>
                         <Routes>
-                            <Route path='/' element={<Home/>}/>
+                            <Route path='/' element={<Navigate to="/books" />}/>
                             <Route path='/books' element={<Books theme={theme} switchTheme={switchTheme}/>}/>
                             <Route
                                 path="*"
