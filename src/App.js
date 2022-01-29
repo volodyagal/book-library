@@ -3,7 +3,7 @@ import './App.scss';
 import useLocalStorage from 'use-local-storage'
 import {Container} from "react-bootstrap";
 import Sidebar from "./components/Sidebar";
-import {Routes, Route} from "react-router-dom";
+import {Routes, Route, Navigate} from "react-router-dom";
 import Home from "./pages/Home";
 import Books from "./pages/Books";
 
@@ -37,6 +37,10 @@ function App() {
                         <Routes>
                             <Route path='/' element={<Home/>}/>
                             <Route path='/books' element={<Books theme={theme} switchTheme={switchTheme}/>}/>
+                            <Route
+                                path="*"
+                                element={<Navigate to="/books" />}
+                            />
                         </Routes>
                     </div>
                 </div>
