@@ -1,0 +1,104 @@
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1.5px solid var(--navbar-border);
+
+  .left-side {
+    display: flex;
+    align-items: center;
+
+    .title {
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 36px;
+      letter-spacing: -0.024em;
+      color: var(--navbar-title);
+      margin: 0 12px 0 0;
+      @media (max-width: 991px) {
+        font-size: 24px;
+        line-height: 33px;
+      }
+    }
+
+    .more-btn {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 12px;
+      background: rgba(12, 99, 90, 0.066666);
+      border-radius: 12px;
+    }
+  }
+
+  .right-side {
+    display: flex;
+    align-items: center;
+
+    .icons-wrapper {
+      display: flex;
+      align-items: center;
+
+      .icon {
+        width: 48px;
+        height: 48px;
+        background: transparent;
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 100ms ease-in-out;
+
+        svg {
+          transform: scale(.9);
+          transition: all 100ms ease-in-out;
+        }
+
+        &.active {
+          background: var(--navbar-icon-active-background);
+          transition: all 100ms ease-in-out;
+
+          svg {
+            transform: scale(1);
+            transition: all 100ms ease-in-out;
+          }
+        }
+
+        &:hover {
+          background: var(--navbar-icon-active-background);
+          transition: all 100ms ease-in-out;
+        }
+
+        &.grid-icon {
+          margin-right: 6px;
+
+          svg {
+            rect {
+              stroke: var(--navbar-grid-icon);
+            }
+          }
+        }
+
+        &.list-icon {
+          svg {
+            rect {
+              fill: var(--navbar-list-icon);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .search {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --sidebar-background: #FFFFFF;
+  --sidebar-title: #696969;
+  --sidebar-button: #FFFFFF;
+  --sidebar-active-button: #1E1E1E;
+  --sidebar-quantity-background: #F9F9F9;
+  --sidebar-quantity-text: #696969;
+  --sidebar-button-text: #3C3C3C;
+  --sidebar-switch-background: #F9F9F9;
+  --sidebar-switcher: #C3C3C3;
+  --sidebar-border: transparent;
+  --sidebar-wrapper-border: #E1E1E1;
+  --content-background: #FFFFFF;
+  --navbar-title: #0F0F0F;
+  --navbar-border: #F0F0F0;
+  --navbar-icon-active-background: #F0F0F0;
+  --navbar-grid-icon: #3C3C3C;
+  --navbar-list-icon: #696969;
+  --navbar-search-icon-background: #F9F9F9;
+  --navbar-search-icon: #3C3C3C;
+  --navbar-search-background: #FFFFFF;
+  --navbar-search-border: #E1E1E1;
+  --navbar-search-color: #000000;
+  --card-title: #1E1E1E;
+  --card-subtitle: #696969;
+  --mobile-top-background: #F0F0F0;
+  --mobile-top-border: #FFFFFF;
+  --mobile-swtcher-background: transparent;
+  --mobile-darkMode-icon-color: #696969;
+}
+
+[data-theme='dark'] {
+  --sidebar-background: #1E1E1E;
+  --sidebar-title: #C3C3C3;
+  --sidebar-button: #000000;
+  --sidebar-active-button: #FFFFFF;
+  --sidebar-quantity-background: #1E1E1E;
+  --sidebar-quantity-text: #969696;
+  --sidebar-button-text: #C3C3C3;
+  --sidebar-switch-background: #000000;
+  --sidebar-switcher: #F0F0F0;
+  --sidebar-border: #000000;
+  --sidebar-wrapper-border: #2D2D2D;
+  --content-background: #000000;
+  --navbar-title: #FFFFFF;
+  --navbar-border: #1E1E1E;
+  --navbar-icon-active-background: #1E1E1E;
+  --navbar-grid-icon: #F9F9F9;
+  --navbar-list-icon: #969696;
+  --navbar-search-icon-background: #0F0F0F;
+  --navbar-search-icon: #D2D2D2;
+  --navbar-search-background: #1E1E1E;
+  --navbar-search-border: #1E1E1E;
+  --navbar-search-color: #FFFFFF;
+  --card-title: #F0F0F0;
+  --card-subtitle: #696969;
+  --mobile-top-background: #1E1E1E;
+  --mobile-top-border: #000000;
+  --mobile-swtcher-background: #000000;
+  --mobile-darkMode-icon-color: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
