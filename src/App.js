@@ -5,6 +5,7 @@ import {Container} from "react-bootstrap";
 import Sidebar from "./components/Sidebar";
 import {Routes, Route, Navigate} from "react-router-dom";
 import Books from "./pages/Books";
+import Home from "./pages/Home";
 
 function App() {
     const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -34,7 +35,7 @@ function App() {
                     </div>
                     <div className='content-wrapper'>
                         <Routes>
-                            <Route path='/' element={<Navigate to="/books" />}/>
+                            <Route path='/' element={<Home/>}/>
                             <Route path='/books' element={<Books theme={theme} switchTheme={switchTheme}/>}/>
                             <Route
                                 path="*"

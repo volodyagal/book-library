@@ -7,7 +7,7 @@ import GridView from "../../components/GridView";
 import ListView from "../../components/ListView";
 import Search from "../../components/Search";
 
-const Books = ({switchTheme, theme}) => {
+const Books = () => {
     const [modalActive, setModalActive] = useState(false);
     const [books, setBooks] = useState([]);
     const [filteredBooks, setFilteredBooks] = useState([]);
@@ -32,7 +32,7 @@ const Books = ({switchTheme, theme}) => {
 
     const searchBook = (value) => {
         setSearchValue(value)
-        if (value) {
+        if (value.length) {
             const filteredItems = books.filter(book => {
                 return book.title.toLowerCase().includes(value.toLowerCase())
                     || book.author.toLowerCase().includes(value.toLowerCase())
@@ -63,9 +63,9 @@ const Books = ({switchTheme, theme}) => {
                 {
                     grid
                         ?
-                        <GridView books={filteredBooks.length ? filteredBooks : books} openBook={openBookModal}/>
+                        <GridView books={searchValue.length ? filteredBooks : books} openBook={openBookModal}/>
                         :
-                        <ListView books={filteredBooks.length ? filteredBooks : books} openBook={openBookModal}/>
+                        <ListView books={searchValue.length ? filteredBooks : books} openBook={openBookModal}/>
                 }
                 <Modal active={modalActive} setActive={setModalActive}>
                     <div className='modal-close-btn' onClick={() => closeBookModal(false)}>
